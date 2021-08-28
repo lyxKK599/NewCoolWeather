@@ -1,10 +1,7 @@
-package com.example.administrator.coolweather;
+package com.example.administrator.Cool;
 
-import android.annotation.TargetApi;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -21,16 +18,14 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 
-import com.example.administrator.coolweather.db.City;
-import com.example.administrator.coolweather.db.County;
-import com.example.administrator.coolweather.db.Province;
-import com.example.administrator.coolweather.gson.Weather;
-import com.example.administrator.coolweather.util.HttpUtil;
-import com.example.administrator.coolweather.util.Utility;
+import com.example.administrator.Cool.db.City;
+import com.example.administrator.Cool.db.County;
+import com.example.administrator.Cool.db.Province;
+import com.example.administrator.Cool.util.HttpUtil;
+import com.example.administrator.Cool.util.Utility;
 import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
-import java.nio.file.WatchEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -207,8 +202,8 @@ public class ChooseAreaFragment extends Fragment {
      * @param address
      * @param type
      */
-    private void queryFromSever(String address, final String type)
-    {showProgressDialog();
+    private void queryFromSever(String address, final String type) {
+        showProgressDialog();
         HttpUtil.sendOkHttpRequest(address, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -281,7 +276,8 @@ public class ChooseAreaFragment extends Fragment {
      */
     private void closeProgressDialog()
     {
-        if(progressDialog!=null)
+        if(progressDialog!=null){
             progressDialog.dismiss();
+        }
     }
 }

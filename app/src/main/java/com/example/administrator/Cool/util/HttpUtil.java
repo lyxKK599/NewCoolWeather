@@ -1,9 +1,7 @@
-package com.example.administrator.coolweather.util;
+package com.example.administrator.Cool.util;
 
-import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 
 /**
  * 封装okhttp的网络请求

@@ -1,4 +1,4 @@
-package com.example.administrator.coolweather;
+package com.example.administrator.Cool;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,8 +6,6 @@ import android.preference.PreferenceManager;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.administrator.coolweather.gson.Weather;
 
 public class MainActivity extends AppCompatActivity {
 

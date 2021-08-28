@@ -2,9 +2,9 @@
     <dbname value="cool_weather" />
     <version value="1"/>
     <list>
-        <mapping class="com.example.administrator.coolweather.db.Province" />
-        <mapping class="com.example.administrator.coolweather.db.City" />
-        <mapping class="com.example.administrator.coolweather.db.County" />
+        <mapping class="com.example.administrator.Cool.db.Province" />
+        <mapping class="com.example.administrator.Cool.db.City" />
+        <mapping class="com.example.administrator.Cool.db.County" />
 
     </list>
 </litepal>

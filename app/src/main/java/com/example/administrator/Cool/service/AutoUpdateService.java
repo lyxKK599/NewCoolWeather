@@ -1,6 +1,5 @@
-package com.example.administrator.coolweather.service;
+package com.example.administrator.Cool.service;
 
-import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -9,12 +8,10 @@ import android.content.SharedPreferences;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.widget.Toast;
 
-import com.example.administrator.coolweather.WeatherActivity;
-import com.example.administrator.coolweather.gson.Weather;
-import com.example.administrator.coolweather.util.HttpUtil;
-import com.example.administrator.coolweather.util.Utility;
+import com.example.administrator.Cool.gson.Weather;
+import com.example.administrator.Cool.util.HttpUtil;
+import com.example.administrator.Cool.util.Utility;
 
 import java.io.IOException;
 
@@ -22,7 +19,7 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-import static com.example.administrator.coolweather.util.Utility.handleWeatherResponse;
+import static com.example.administrator.Cool.util.Utility.handleWeatherResponse;
 
 public class AutoUpdateService extends Service {
     public AutoUpdateService() {

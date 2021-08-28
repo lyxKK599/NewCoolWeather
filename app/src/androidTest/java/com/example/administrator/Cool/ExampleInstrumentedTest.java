@@ -1,4 +1,4 @@
-package com.example.administrator.coolweather;
+package com.example.administrator.Cool;
 
 import android.content.Context;
 

@@ -1,22 +1,19 @@
-package com.example.administrator.coolweather.util;
+package com.example.administrator.Cool.util;
 
 import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 
-import com.example.administrator.coolweather.db.City;
-import com.example.administrator.coolweather.db.County;
-import com.example.administrator.coolweather.db.Province;
-import com.example.administrator.coolweather.gson.AQI;
-import com.example.administrator.coolweather.gson.Weather;
+import com.example.administrator.Cool.db.City;
+import com.example.administrator.Cool.db.County;
+import com.example.administrator.Cool.db.Province;
+import com.example.administrator.Cool.gson.AQI;
+import com.example.administrator.Cool.gson.Weather;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.List;
 
 public class Utility {
     private static String response;

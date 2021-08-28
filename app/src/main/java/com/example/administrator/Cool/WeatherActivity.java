@@ -1,4 +1,4 @@
-package com.example.administrator.coolweather;
+package com.example.administrator.Cool;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -6,8 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -23,23 +21,19 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
-import com.example.administrator.coolweather.gson.AQI;
-import com.example.administrator.coolweather.gson.Forecast;
-import com.example.administrator.coolweather.gson.Lifestyle;
-import com.example.administrator.coolweather.gson.Weather;
-import com.example.administrator.coolweather.service.AutoUpdateService;
-import com.example.administrator.coolweather.util.HttpUtil;
-import com.example.administrator.coolweather.util.Utility;
-import com.google.gson.Gson;
+import com.example.administrator.Cool.gson.AQI;
+import com.example.administrator.Cool.gson.Weather;
+import com.example.administrator.Cool.service.AutoUpdateService;
+import com.example.administrator.Cool.util.HttpUtil;
 
 import java.io.IOException;
-import java.util.List;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-import static com.example.administrator.coolweather.util.Utility.handleAQIResponse;
-import static com.example.administrator.coolweather.util.Utility.handleWeatherResponse;
+import static com.example.administrator.Cool.util.Utility.handleAQIResponse;
+import static com.example.administrator.Cool.util.Utility.handleWeatherResponse;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -107,7 +101,6 @@ public class WeatherActivity extends AppCompatActivity {
 
         }else
         {   //无缓存时,去服务器查询天气
-            //String weatherId=getIntent().getStringExtra("weather_id");
             mWeatherId=getIntent().getStringExtra("weather_id");
             weatherLayout.setVisibility(View.INVISIBLE);
             requestWeather(mWeatherId);
@@ -173,8 +166,10 @@ public class WeatherActivity extends AppCompatActivity {
      */
     public void requestWeather(String weatherId)
     {
-        final String weatherUrl="https://free-api.heweather.com/s6/weather?location="+weatherId.toString()+"&key=5cfa71f0523045cbbc2a915848c89ad4";
-        final String aqiUrl="https://free-api.heweather.com/s6/air/now?location="+weatherId.toString()+"&key=5cfa71f0523045cbbc2a915848c89ad4";
+        final String weatherUrl="https://free-api.heweather.com/s6/weather?location="
+                +weatherId.toString()+"&key=5cfa71f0523045cbbc2a915848c89ad4";
+        final String aqiUrl="https://free-api.heweather.com/s6/air/now?location="
+                +weatherId.toString()+"&key=5cfa71f0523045cbbc2a915848c89ad4";
 
         /**
          * 这是对基本天气的访问,但是缺了aqi这一项
@@ -276,6 +271,7 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private void showWeatherInfo(Weather weather) {
 
         String cityName=weather.getHeWeather6().get(0).getBasicX().getLocation();
